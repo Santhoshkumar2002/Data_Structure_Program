@@ -4,9 +4,9 @@
 int main()
 {
     Data *head = NULL;
-    int choice, data;
+    int choice, data, pos, ret;
     printf("Menu :\n");
-    printf("1. Insert at First\n2. Middle Node\n3. Get nth last\n4. Exit\n");
+    printf("1. Insert at First\n2. Middle Node\n3. Get nth Last\n4. Print List\n5. Exit\n");
     while(1)
     {
         printf("Enter the Option to do : \n");
@@ -43,9 +43,31 @@ int main()
             }
             case 3:
             {
+                printf("Enter the position to get data : ");
+                scanf("%d", &pos);
+                if((ret = get_nth_last(head, pos, &data)) == e_failure)
+                {
+                    printf("-->Position Not Found\n");
+                }
+                else if(ret == e_list_empty)
+                {
+                    printf("-->List Empty\n");
+                }
+                else
+                {
+                    printf("%dth position last data is %d\n", pos, data);
+                }
                 break;
             }
             case 4:
+            {
+                if(print_list(head) == e_list_empty)
+                {
+                    printf("-->List Empty\n");
+                }
+                break;
+            }
+            case 5:
             {
                 return 0;
             }

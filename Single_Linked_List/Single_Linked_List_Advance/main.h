@@ -13,3 +13,5 @@ typedef enum return_list
 
 Status insert_at_first(Data **head, int data);
 Status find_middle(Data *head, int *mid);
+Status get_nth_last(Data *head, int pos, int *data);
+Status print_list(Data *head);
