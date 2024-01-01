@@ -6,7 +6,7 @@ int main()
     Data *head = NULL;
     int choice, data, pos, ret;
     printf("Menu :\n");
-    printf("1. Insert at First\n2. Middle Node\n3. Get nth Last\n4. Print List\n5. Exit\n");
+    printf("1. Insert at First\n2. Middle Node\n3. Get nth Last\n4. Reverse List\n5. Print List\n6. Exit\n");
     while(1)
     {
         printf("Enter the Option to do : \n");
@@ -61,13 +61,25 @@ int main()
             }
             case 4:
             {
+                if(reverse_list_iter(&head) == e_success)
+                {
+                    printf("-->Reverse list successfull\n");
+                }
+                else
+                {
+                    printf("-->List empty\n");
+                }
+                break;
+            }
+            case 5:
+            {
                 if(print_list(head) == e_list_empty)
                 {
                     printf("-->List Empty\n");
                 }
                 break;
             }
-            case 5:
+            case 6:
             {
                 return 0;
             }
