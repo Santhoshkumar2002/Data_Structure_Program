@@ -18,4 +18,5 @@ typedef enum status{
 Status create_queue(Queue *q, int size);
 Status enqueue(Queue *q, int data);
 Status dequeue(Queue *q);
+Status print_queue(Queue q);
 #endif

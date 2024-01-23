@@ -15,9 +15,11 @@ int main()
 
     while(1)
     {
-        printf("Menu :\n1. Enqueue\n2. Dequeue\n");
+        printf("\n--------------------------\n");
+        printf("Menu :\n1. Enqueue\n2. Dequeue\n3. Print Queue\n4. Exit\n");
         printf("Enter the choice : ");
         scanf("%d", &choice);
+        printf("--------------------------\n");
         switch(choice)
         {
             case 1:
@@ -49,7 +51,7 @@ int main()
             }
             case 3:
             {
-                //if(print_queue(q) == e_failure)
+                if(print_queue(q) == e_failure)
                 {
                     printf("INFO -> Queue is empty\n");
                 }

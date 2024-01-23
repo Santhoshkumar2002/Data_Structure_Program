@@ -49,5 +49,17 @@ Status dequeue(Queue *q)
 
 Status print_queue(Queue q)
 {
-    
+    if(q.count == 0)
+    {
+        return e_failure;
+    }
+    printf("front -> ");
+    while(q.count != 0)
+    {
+        printf("%d ", q.que[q.front]);
+        q.front = (q.front+1)%q.capacity;
+        q.count--;
+    }
+    printf("<- rear\n");
+    return e_success;
 }
